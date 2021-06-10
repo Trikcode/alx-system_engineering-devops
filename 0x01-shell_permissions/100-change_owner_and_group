@@ -1,0 +1,2 @@
+#!/bin/bash
+do chown -R betty:holberton ../0x01-shell_permissions
