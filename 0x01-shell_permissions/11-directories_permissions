@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo chmod o+x ../0x00-shell_permissions
+sudo chmod -R oug+X ./ ...
