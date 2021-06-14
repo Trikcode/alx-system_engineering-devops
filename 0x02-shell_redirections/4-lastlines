@@ -1,3 +1,2 @@
 #!/bin/bash
 sudo tail -10 /etc/passwd
-

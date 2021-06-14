@@ -1,3 +1,2 @@
 #!/bin/bash
 sudo head -5 /etc/passwd
-
