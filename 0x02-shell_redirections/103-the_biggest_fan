@@ -1,0 +1,2 @@
+#!/bin/bash
+tail -n+2 | cut -f1 | sort | uniq -c | sort -nr | rev | cut --delimiter=' ' -f1 | rev | head --lines=11
