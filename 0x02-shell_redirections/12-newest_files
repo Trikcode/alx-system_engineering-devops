@@ -1,2 +1,2 @@
 #!/bin/bash
-find /0x02-shell_directories ls -l --sort=10 -type f |head -n 10
+ls -t | head
