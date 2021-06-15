@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo head -5 /etc/passwd
+sudo head -10 /etc/passwd
