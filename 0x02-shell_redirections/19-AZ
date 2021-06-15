@@ -1,2 +1,2 @@
 #!/bin/bash
-echo Aca | tr Ac Ze
+tr '[Ac]' '[Ze]'
