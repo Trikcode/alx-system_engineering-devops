@@ -1,21 +1,15 @@
 #!/usr/bin/env bash
-# This script prints classic fizz buzz
+# FizzBuzz!!
 
-i=1
-
-while ((i < 101))
+for i in $(seq 1 100);
 do
-if ((i % 5 == 0 && i % 3 == 0))
-then
+    if [ $((i % 15)) -eq 0 ]; then
 	echo "FizzBuzz"
-elif ((i % 5 == 0))
-then
-	echo "Buzz"
-elif ((i % 3 == 0))
-then
+    elif [ $((i % 3)) -eq 0 ]; then
 	echo "Fizz"
-else
+    elif [ $((i % 5)) -eq 0 ]; then
+	echo "Buzz"
+    else
 	echo "$i"
-fi
-let i++
+    fi
 done
