@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times, 4 is bad luck, 8 is good
+
+i=0
+
+while ((i < 10))
+do
+	let i++
+	if ((i == 4))
+	then
+		echo "bad luck"
+	elif ((i == 8))
+	then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+done

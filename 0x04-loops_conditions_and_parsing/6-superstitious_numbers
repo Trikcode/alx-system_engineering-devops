@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# This script notes cultural bad luck numbers up to 20
+
+i=0
+
+while ((i < 20))
+do
+	let i++
+	echo "$i"
+	case "$i" in
+	4) echo "bad luck from China"
+		;;
+	9) echo "bad luck from Japan"
+		;;
+	17) echo "bad luck from Italy"
+		;;
+esac
+done

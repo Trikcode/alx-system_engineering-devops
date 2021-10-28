@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script shows minutes and hours
+
+i=0
+i2=1
+while ((i < 13))
+do
+	echo "Hour: $i"
+	while ((i2 < 60))
+	do
+		echo "$i2"
+		let i2++
+	done
+	let i2=1
+	let i++
+done
