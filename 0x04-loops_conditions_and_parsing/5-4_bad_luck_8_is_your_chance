@@ -1,18 +1,17 @@
 #!/usr/bin/env bash
-# This script is displaying "Best School" 10 times, 4 is bad luck, 8 is good
+# loops from 1 to 10 and displays
+#+ "bad luck" for the 4th loop iteration
+#+ "good luck" for the 8th loop iteration
+#+ "Holberton School" for the other iterations
 
-i=0
-
-while ((i < 10))
-do
-	let i++
-	if ((i == 4))
-	then
-		echo "bad luck"
-	elif ((i == 8))
-	then
-		echo "good luck"
-	else
-		echo "Best School"
-	fi
+COUNTER=1
+while [ "$COUNTER" -le 10 ]; do
+    if [ $COUNTER -eq 4 ]; then
+	echo "bad luck"
+    elif [ $COUNTER -eq 8 ]; then
+	echo "good luck"
+    else
+	echo "Holberton School"
+    fi
+    let COUNTER=COUNTER+1
 done
