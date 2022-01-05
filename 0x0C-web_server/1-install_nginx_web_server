@@ -1,15 +1,7 @@
 #!/usr/bin/env bash
-# installs nginx and configure it to listen on port 80 make it return a page with
-# "Hello World" in it
-
-apt update
+# Install nginx and start it
 apt-get -y install nginx
-sudo ufw allow 'Nginx HTTP'
-sudo mkdir -p /var/www/html
-sudo chmod -R 755 /var/www
-echo 'Hello World!' > /var/www/html/index.html
-if [ "$(pgrep -c nginx)" -le 0 ]; then
-	service nginx start
-else
-	service nginx restart
-fi
+service nginx start
+ufw allow 'Nginx HTTP'
+echo "Hello World!\n" | sudo tee /var/www/html/index.nginx-debian.html
+service nginx restart
