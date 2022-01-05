@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Configure Nginx
+
+apt updte
+apt install -y nginx
+
+echo "Hello World" > /var/www/html/index.html
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+printf %s "server {
+    listen 80;
+    listen [::]:80 default_server;
+    root /var/www/html;
+    index index.html;
+    location /redirect_me {
+        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+    }
+    error_page 404 /404.html;
+}" > /etc/nginx/sites-enabled/default
+
+service nginx restart
