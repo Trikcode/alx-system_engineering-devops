@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# install nginx
+sudo apt-get update
+sudo apt-get -y install nginx
+echo "School" | sudo tee -a /var/www/html/index.html
+sudo sed -i '36a \rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" | sudo tee -a /var/www/html/custom_404.html
+sudo sed -i '37a \error_page 404 /custom_404.html;\n\tlocation = /custom_404.html {\n\t\troot /var/www/html;\n\t\tinternal;\n\t}' /etc/nginx/sites-available/default
+
+sudo sed -i "42a \add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-available/default
+
+sudo service nginx restart
