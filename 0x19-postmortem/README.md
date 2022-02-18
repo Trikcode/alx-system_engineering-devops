@@ -41,5 +41,4 @@ file name, located in the `wp-content` directory of the application folder, was
 
 Patch involved a simple fix on the typo, removing the trailing `p`.
 
-But of course, it will never occur again, because we're programmers, and we never make
-errors! :wink:
+That was all needed!
